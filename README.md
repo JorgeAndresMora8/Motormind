@@ -77,6 +77,7 @@ Cada carpeta del proyecto contiene un archivo `index.ts` (también conocido como
 │   │   ├── routes/          # Custom hooks para la reutilización de lógica.
 │   │   ├── socket/          # Vistas o páginas de la aplicación.
 │   │   ├── types/           # Llamadas a la API y otros servicios externos.
+│   │   ├── Server/           # Llamadas a la API y otros servicios externos.
 │   │   ├── utilities/       # Tipos/Interfaces de TypeScript.
 │
 │── README.md
