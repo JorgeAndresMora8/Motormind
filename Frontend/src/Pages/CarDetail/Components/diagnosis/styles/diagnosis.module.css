@@ -1,0 +1,11 @@
+.diagnosis_item { 
+    width: 30rem;
+    border-radius: 1rem;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    /* border: 1px solid lightgray; */
+    /* padding: 1rem; */
+}

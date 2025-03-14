@@ -1,0 +1,15 @@
+# Node.js
+node_modules/
+package-lock.json
+
+# Build
+dist/
+
+# Env variables
+.env
+
+# Editor / Sistema
+.vscode/
+*.log
+.DS_Store
+Thumbs.db
