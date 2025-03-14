@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import {Loading} from "../../../../Components";
+import {Loading} from "../../../../components";
 import { API_ROUTES } from "../../../../config";
 import { useSocket } from "../../../../context"; 
 import {useFetch} from "../../../../hooks";
 import { ICar } from "../../../../types";
 import CarItem from "./CarItem";
-import { SOCKET_CHANNELS } from "../../../../Constant";
+import { SOCKET_CHANNELS } from "../../../../constant";
 
 function CarList() {
   const [carList, setCarList] = useState<ICar[]>([]);

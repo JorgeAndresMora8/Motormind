@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { ArrowLeft } from "react-bootstrap-icons";
 import { Link, useParams } from "react-router-dom";
-import { Loading } from "../../Components";
+import { Loading } from "../../components";
 import { useFetch } from "../../hooks";
 import { IDiagnosis } from "../../types";
 import { Detail } from "./Components";

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {Loading} from "../../../../Components";
+import {Loading} from "../../../../components";
 import {useFetch} from "../../../../hooks";
 import {IDiagnosis} from "../../../../types";
 import DiagnosisList from "./DiagnosisList";
@@ -8,7 +8,7 @@ import { useSocket } from "../../../../context";
 import {API_ROUTES} from "../../../../config";
 import { toast, ToastContainer } from "react-toastify";
 import { Link } from "react-router-dom";
-import { SOCKET_CHANNELS } from "../../../../Constant";
+import { SOCKET_CHANNELS } from "../../../../constant";
 
 interface DiagnosisProps {
   id: string;

@@ -1,5 +1,5 @@
 import { API_ROUTES } from "../config";
-import { CarFormData } from "../Pages/Home/Components/Form/Model";
+import { CarFormData } from "../pages/Home/Components/Form/Model";
 
 
 export const createCar = async (formData: CarFormData) => {

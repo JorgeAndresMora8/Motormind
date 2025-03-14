@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { generateDiagnosis } from "../../../../Service";
+import { generateDiagnosis } from "../../../../service";
 
 interface SymptomsModalProps {
   carId: string;

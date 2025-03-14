@@ -3,13 +3,13 @@ import './App.css';
 
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Footer, Loading, NavbarComponent } from './Components';
-import { URL } from "./Constant";
+import { Footer, Loading, NavbarComponent, NotFound } from './components';
+import { URL } from "./constant";
 
 // IMPORT COMPONENTS
-const Home = lazy(() => import("./Pages/Home"));
-const CarDetail = lazy(() => import("./Pages/CarDetail/CarDetail"));
-const Diagnosis = lazy(() => import("./Pages/Diagnosis/Diagnosis"));
+const Home = lazy(() => import("./pages/Home"));
+const CarDetail = lazy(() => import("./pages/CarDetail/CarDetail"));
+const Diagnosis = lazy(() => import("./pages/Diagnosis/Diagnosis"));
 
 function App() {
 
@@ -23,6 +23,7 @@ function App() {
             <Route path={URL.HOME} element={<Home />} />
             <Route path={URL.CARDETAIL} element={<CarDetail />} />
             <Route path={URL.DIAGNOSIS} element={<Diagnosis />} />
+            <Route path={URL.NOTFOUND} element={<NotFound />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

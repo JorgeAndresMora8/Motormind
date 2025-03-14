@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import Loading from "../../Components/Loading";
+import Loading from "../../components/Loading";
 import useFetch from "../../hooks/useFetch";
 import {ICar} from "../../types/car";
 import Detail from "./Components/detail/Detail";
