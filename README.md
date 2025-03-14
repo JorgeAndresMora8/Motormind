@@ -99,9 +99,24 @@ Cada carpeta del proyecto contiene un archivo `index.ts` (también conocido como
 ## Decisiones de Diseño
 
 ### Arquitectura SOLID
-controller, service, repository, dao
+Se aplico principios de solid a la hora de construir la aplicacion, donde esta divido en capas:
+| Capa         | Propósito                                                                 |
+|--------------|---------------------------------------------------------------------------|
+| Controller   | Gestiona las solicitudes HTTP y actúa como intermediario entre el cliente y la aplicación. Contiene instancias de la capa de Service para manejar la lógica asociada a cada ruta (endpoint). |
+| Service      | Alberga la lógica de negocio de la aplicación. Se encarga de procesar, transformar y validar los datos antes de enviarlos a otras capas o devolver una respuesta al Controller. |
+| Repository   | Funciona como intermediario entre la capa de Service y la base de datos. Su objetivo es abstraer las operaciones de la base de datos y devolver los datos en formato DTO (Data Transfer Object) para su uso en la capa de Service. |
+| DAO          | Se encarga de la interacción directa con la base de datos. Ejecuta consultas, inserciones, actualizaciones y eliminaciones de datos, proporcionando una capa de acceso a los datos crudos. |
+
 
 ### Implementacion Socket.io
+se implementa para resolver el problema de la espera bloqueante en operaciones de larga duración. Al realizar solicitudes a APIs externas (como la generación de un diagnóstico), el tiempo de respuesta es impredecible, lo que obligaría al usuario a permanecer inactivo hasta completar la tarea, degradando la experiencia de usuario.
 
-### Integracion Con OPEN AI.
+Con socket.io, gracias a su comunicación bidireccional en tiempo real:
+
+- El servidor responde inmediatamente con un código 200 al validar la petición, notificando que el diagnóstico está en proceso.
+
+- El usuario puede continuar interactuando con la aplicación sin restricciones.
+
+- Una vez finalizada la operación, el servidor envía una notificación específica al frontend mediante un socket, informando que el diagnóstico está listo.
+Esto elimina la espera forzada, optimiza el uso de recursos y permite multitarea, manteniendo al usuario informado en tiempo real.
 ---
