@@ -9,16 +9,51 @@ Clean Architecture permite separar claramente las responsabilidades dentro de la
 Esta estructura proporciona múltiples beneficios, como la reducción de la dependencia entre módulos, la facilidad para realizar pruebas, la escalabilidad del proyecto y la flexibilidad para futuras modificaciones sin afectar el núcleo de la aplicación.
 
 ## Ejecutar Aplicacion
-
-Antes de comenzar, asegúrate de tener instalado lo siguiente en tu máquina:
-
-## Clonar el Repositorio
-
 Para clonar el repositorio, ejecuta el siguiente comando en tu terminal:
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repositorio.git
+git clone https://github.com/JorgeAndresMora8/Motormind.git
 ```
+
+Luego, navega a la carpeta del proyecto:
+```
+cd Motormind
+```
+### Instalar Dependencias
+El proyecto está dividido en dos carpetas principales: Frontend y Backend. Debes instalar las dependencias para ambas partes.
+####Instalar dependencias del Frontend:
+```
+cd Frontend
+npm install
+```
+#### Instalar dependencias del Backend:
+```
+cd Backend
+npm install
+```
+#### Configurar Variables de Entorno
+En la carpeta backend, debes crear un archivo .env para configurar las variables de entorno necesarias. Puedes usar el siguiente ejemplo como referencia:
+```
+MONGO_DB_URI=mongodb+srv://jorgemora:jorgemora2002@cluster0.epzeo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+PORT=8080
+OPENAI_API_KEY=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
+```
+#### Ejecutar La Aplicacion: 
+Una vez configuradas las dependencias y las variables de entorno, puedes ejecutar tanto el frontend como el backend en modo de desarrollo.
+
+##### Ejecutar Backend: 
+Navega a la carpeta backend y ejecuta:
+```
+npm run dev
+```
+Esto iniciará el servidor backend en el puerto especificado en el archivo .env (por defecto, 8080), siendo la url: http://localhost:8080.
+
+##### Ejecutar Frontend: 
+Navega a la carpeta frontend y ejecuta:
+```
+npm run dev
+```
+Esto iniciará el servidor de desarrollo del frontend. Por defecto, la aplicación estará disponible.
 
 ## Frontend
 
