@@ -134,7 +134,7 @@ interface ICar {
 }
 ```
 
-Representacion de Diagnosticos:
+Representación de diagnóstico:
 ```
 
  interface IDiagnosis {
@@ -210,7 +210,7 @@ Se aplico principios de solid a la hora de construir la aplicacion, donde esta d
 | DAO          | Se encarga de la interacción directa con la base de datos. Ejecuta consultas, inserciones, actualizaciones y eliminaciones de datos, proporcionando una capa de acceso a los datos crudos. |
 
 
-### Implementacion Socket.io
+### Implementación Socket.io
 se implementa para resolver el problema de la espera bloqueante en operaciones de larga duración. Al realizar solicitudes a APIs externas (como la generación de un diagnóstico), el tiempo de respuesta es impredecible, lo que obligaría al usuario a permanecer inactivo hasta completar la tarea, degradando la experiencia de usuario.
 
 Con socket.io, gracias a su comunicación bidireccional en tiempo real:
@@ -222,7 +222,7 @@ Con socket.io, gracias a su comunicación bidireccional en tiempo real:
 - Una vez finalizada la operación, el servidor envía una notificación específica al frontend mediante un socket, informando que el diagnóstico está listo.
 Esto elimina la espera forzada, optimiza el uso de recursos y permite multitarea, manteniendo al usuario informado en tiempo real.
 
-### Representacion De Modelos
+### Representación De Modelos
 Representacion de Autos:
 ```
 
@@ -245,7 +245,7 @@ interface ICar {
     }
 ```
 
-Representacion de Diagnosticos:
+Representación de diagnóstico:
 ```
 
  interface IDiagnosis {
