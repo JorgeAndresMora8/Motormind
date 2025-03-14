@@ -55,8 +55,14 @@ Socket.IO se ha implementado en la aplicación para proporcionar una comunicaci�
 ### Uso de Barrels
 Cada carpeta del proyecto contiene un archivo `index.ts` (también conocido como "barrel") que facilita la importación de componentes, hooks, servicios y otros módulos. Esta práctica ayuda a reducir las rutas relativas largas y a mejorar la organización del código. Al agrupar y reexportar módulos, logramos una estructura más limpia y mantenible, lo que facilita la escalabilidad de la aplicación a medida que crece.
 
-### Funcion de carpeta Adapters
-Cada carpeta del proyecto contiene un archivo `index.ts` (también conocido como "barrel") que facilita la importación de componentes, hooks, servicios y otros módulos. Esta práctica ayuda a reducir las rutas relativas largas y a mejorar la organización del código. Al agrupar y reexportar mó
+### Arquitecura CLEAN ARCHITECTURE
+Un esquema mas estructurado de como se estructuro la aplicacion, promoviendo los principios de separation of concerns: 
+| Capa          | Propósito                                                                                     |
+|---------------|-----------------------------------------------------------------------------------------------|
+| Capa Externa  | Gestiona la comunicación con servicios y APIs externos, manejando solicitudes y respuestas mediante protocolos específicos. (carpeta service) |
+| Adapters      | Transforman los datos externos al formato requerido por la aplicación, garantizando compatibilidad entre los tipos del backend y los modelos del frontend. (carpeta adapters) |
+| Casos de Uso  | Coordinan la lógica de negocio: orquestan interacciones entre modelos, adapters y servicios para ejecutar operaciones específicas del sistema. (components) |
+| Models        | Representan las entidades centrales del dominio, definiendo su estructura de datos, comportamientos y relaciones. (states/context) |
 
 
 ---
