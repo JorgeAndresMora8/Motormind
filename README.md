@@ -111,7 +111,56 @@ Un esquema mas estructurado de como se estructuro la aplicacion, promoviendo los
 | Casos de Uso  | Coordinan la lógica de negocio: orquestan interacciones entre modelos, adapters y servicios para ejecutar operaciones específicas del sistema. (components) |
 | Models        | Representan las entidades centrales del dominio, definiendo su estructura de datos, comportamientos y relaciones. (states/context) |
 
+### Representacion De Modelos
+Representacion de Autos:
+```
 
+interface ICar {
+    id: string;       // ID del registro del auto
+    brand: string;    // Marca del auto 
+    year: string;     // Año del auto
+    model: string;    // Modelo del auto
+    mileage: number;  // Kilometraje del auto
+    image: string;    // Imagen del auto (URL)
+}
+/* Ejemplo */
+{
+    "id": "198d3ab1-efbb-461d-9b2c-d96fd3e306b9",
+    "brand": "Ford",
+    "year": "2024",
+    "model": "Raptor",
+    "mileage": 0,
+    "image": "https://th.bing.com/th/id/OIP.dfDrE-cGmqHqUZwdXiz1dgAAAA?rs=1&pid=ImgDetMain"
+}
+```
+
+Representacion de Diagnosticos:
+```
+
+ interface IDiagnosis {
+    id: string;        // ID del diagnóstico
+    carId: string;     // ID del auto que se realizó el diagnóstico
+    date: string;      // Fecha que se realizó el diagnóstico
+    diagnosis: { 
+        high: string,   // Probabilidad alta del problema
+        medium: string, // Probabilidad media del problema
+        low: string     // Probabilidad baja del problema
+    },
+    symptoms: string,   // Síntomas registrados
+}
+/* Ejemplo */
+    {
+        "id": "54e867ec-5045-4556-be52-7dc37500b2cb",
+        "carId": "ac1fc860-44a0-4462-bc21-52b2f977de7c",
+        "date": "13/03/2025",
+        "diagnosis": {
+            "high": "Los fusibles de las luces delanteras podrían estar quemados.",
+            "medium": "El interruptor de las luces delanteras podría estar dañado.",
+            "low": "Puede ser un problema con el cableado de las luces delanteras."
+        },
+        "symptoms": "las luces delanteras no encienden"
+    }
+```
 ---
 ## Backend
 
@@ -172,4 +221,55 @@ Con socket.io, gracias a su comunicación bidireccional en tiempo real:
 
 - Una vez finalizada la operación, el servidor envía una notificación específica al frontend mediante un socket, informando que el diagnóstico está listo.
 Esto elimina la espera forzada, optimiza el uso de recursos y permite multitarea, manteniendo al usuario informado en tiempo real.
+
+### Representacion De Modelos
+Representacion de Autos:
+```
+
+interface ICar {
+    id: string;       // ID del registro del auto
+    brand: string;    // Marca del auto 
+    year: string;     // Año del auto
+    model: string;    // Modelo del auto
+    mileage: number;  // Kilometraje del auto
+    image: string;    // Imagen del auto (URL)
+}
+/* Ejemplo */
+    {
+        "id": "52d4d683-b40c-43fb-ac15-e444865b917c",
+        "brand": "Audi",
+        "year": "2023",
+        "model": "R8",
+        "milaege": 0,
+        "image": "https://th.bing.com/th/id/OIP.pR8uy3W_DDPzxeAcwiBHgAHaE4?rs=1&pid=ImgDetMain"
+    }
+```
+
+Representacion de Diagnosticos:
+```
+
+ interface IDiagnosis {
+    id: string;        // ID del diagnóstico
+    carId: string;     // ID del auto que se realizó el diagnóstico
+    date: string;      // Fecha que se realizó el diagnóstico
+    diagnosis: { 
+        high: string,   // Probabilidad alta del problema
+        medium: string, // Probabilidad media del problema
+        low: string     // Probabilidad baja del problema
+    },
+    symptoms: string,   // Síntomas registrados
+}
+/* Ejemplo */
+    {
+        "id": "54e867ec-5045-4556-be52-7dc37500b2cb",
+        "carId": "ac1fc860-44a0-4462-bc21-52b2f977de7c",
+        "date": "13/03/2025",
+        "diagnosis": {
+            "high": "Los fusibles de las luces delanteras podrían estar quemados.",
+            "medium": "El interruptor de las luces delanteras podría estar dañado.",
+            "low": "Puede ser un problema con el cableado de las luces delanteras."
+        },
+        "symptoms": "las luces delanteras no encienden"
+    }
+```
 ---
