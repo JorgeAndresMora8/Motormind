@@ -97,7 +97,7 @@ Esto iniciará el servidor de desarrollo del frontend. Por defecto, la aplicaci�
 ## Decisiones de Diseño
 
 ### Uso de Socket.IO
-Socket.IO se ha implementado en la aplicación para proporcionar una comunicación en tiempo real entre el cliente y el servidor. Esto es especialmente útil para casos como la actualización de diagnósticos de vehículos, donde se requieren respuestas instantáneas sin la necesidad de recargar la página. Socket.IO permite una interacción más fluida y dinámica, mejorando la experiencia del usuario final.
+Se empleó socket.io-client, para establecer una comunicación bidireccional con el backend y recibir, mediante sockets, las notificaciones de las operaciones asincrónicas finalizadas. Esto proporciona una mayor fluidez y una mejor experiencia de usuario, permitiendo que el sistema trabaje en segundo plano mientras el usuario continúa interactuando con la aplicación sin interrupciones.
 
 ### Uso de Barrels
 Cada carpeta del proyecto contiene un archivo `index.ts` (también conocido como "barrel") que facilita la importación de componentes, hooks, servicios y otros módulos. Esta práctica ayuda a reducir las rutas relativas largas y a mejorar la organización del código. Al agrupar y reexportar módulos, logramos una estructura más limpia y mantenible, lo que facilita la escalabilidad de la aplicación a medida que crece.
