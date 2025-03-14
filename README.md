@@ -16,17 +16,17 @@ Esta estructura proporciona múltiples beneficios, como la reducción de la depe
 ```
 │── Motormind/
 │   ├── src/
-│   │   ├── adapters/      # Se encargan de recibir información de servicios externos y adaptarla a los modelos de la aplicación.
-│   │   ├── assets/        # Archivos estáticos como imágenes, íconos.
-│   │   ├── components/    # Componentes reutilizables de UI.
-│   │   ├── config/        # Configuraciones generales de la aplicación.
-│   │   ├── constants/     # Constantes estáticas (URLs de API, etc.).
-│   │   ├── context/       # Provee contexto en React.
-│   │   ├── hooks/         # Custom hooks para la reutilización de lógica.
-│   │   ├── pages/         # Vistas o páginas de la aplicación.
-│   │   ├── services/      # Llamadas a la API y otros servicios externos.
-│   │   ├── types/         # Tipos/Interfaces de TypeScript.
-│   │   ├── utilities/     # Funciones utilitarias que se pueden usar en toda la aplicación.
+│   │   ├── adapters/    # Se encargan de recibir información de servicios externos y adaptarla a los modelos de la aplicación.
+│   │   ├── assets/      # Archivos estáticos como imágenes, íconos.
+│   │   ├── components/  # Componentes reutilizables de UI.
+│   │   ├── config/      # Configuraciones generales de la aplicación.
+│   │   ├── constants/   # Constantes estáticas (URLs de API, etc.).
+│   │   ├── context/     # Provee contexto en React.
+│   │   ├── hooks/       # Custom hooks para la reutilización de lógica.
+│   │   ├── pages/       # Vistas o páginas de la aplicación.
+│   │   ├── services/    # Llamadas a la API y otros servicios externos.
+│   │   ├── types/       # Tipos/Interfaces de TypeScript.
+│   │   ├── utilities/   # Funciones utilitarias que se pueden usar en toda la aplicación.
 │
 │── README.md
 ```
@@ -68,17 +68,17 @@ Cada carpeta del proyecto contiene un archivo `index.ts` (también conocido como
 ```
 │── Motormind/
 │   ├── src/
-│   │   ├── config/          # Se encargan de recibir información de servicios externos y adaptarla a los modelos de la aplicación.
-│   │   ├── constant/        # Archivos estáticos como imágenes, íconos.
-│   │   ├── controller/      # Componentes reutilizables de UI.
-│   │   ├── DB/              # Configuraciones generales de la aplicación.
-│   │   ├── middleware/      # Constantes estáticas (URLs de API, etc.).
-│   │   ├── modules/         #
-│   │   ├── routes/          # Custom hooks para la reutilización de lógica.
-│   │   ├── socket/          # Vistas o páginas de la aplicación.
-│   │   ├── types/           # Llamadas a la API y otros servicios externos.
-│   │   ├── Server/           # Llamadas a la API y otros servicios externos.
-│   │   ├── utilities/       # Tipos/Interfaces de TypeScript.
+│   │   ├── config/          # Configuraciones generales de la aplicación (variables de entorno).
+│   │   ├── constant/        # Constantes estáticas de la aplicación (URLs de API, valores fijos, etc.).
+│   │   ├── controller/      # Maneja las solicitudes entrantes, procesa datos y envía respuestas.
+│   │   ├── DB/              # Configuración y conexión a la base de datos, modelos y operaciones relacionadas.
+│   │   ├── middleware/      # Funciones intermedias que procesan solicitudes y respuestas (autenticación, validación, etc.).
+│   │   ├── modules/         #  Módulos específicos de la aplicación que agrupan funcionalidades relacionadas.
+│   │   ├── routes/          # Definición de las rutas de la aplicación y su asociación con controladores.
+│   │   ├── socket/          # Configuración y manejo de conexiones en tiempo real usando WebSockets.
+│   │   ├── types/           # Definiciones de tipos e interfaces de TypeScript.
+│   │   ├── Server/          # Configuración y lógica del servidor (inicialización, middlewares globales, etc.).
+│   │   ├── utilities/       # Funciones de utilidad reutilizables (helpers, formateadores, etc.).
 │
 │── README.md
 ```
