@@ -34,9 +34,9 @@ npm install
 #### Configurar Variables de Entorno
 En la carpeta backend, debes crear un archivo .env para configurar las variables de entorno necesarias. Puedes usar el siguiente ejemplo como referencia:
 ```
-MONGO_DB_URI=mongodb+srv://jorgemora:jorgemora2002@cluster0.epzeo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+MONGO_DB_URI=***
 PORT=8080
-OPENAI_API_KEY=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
+OPENAI_API_KEY=***
 ```
 #### Ejecutar La Aplicacion: 
 Una vez configuradas las dependencias y las variables de entorno, puedes ejecutar tanto el frontend como el backend en modo de desarrollo.
