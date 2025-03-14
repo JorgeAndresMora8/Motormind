@@ -37,14 +37,12 @@ const createDiagnosis = async (
 
   try {
     res.status(200).json({ sucess: "Generando diagnostico" });
-    setTimeout(async () => {
         const resp = await diagnosisService.createDiagnosis(
             req.body.symptoms,
             req.body.carId
           );
           
           io.emit(SOCKET_CHANNELS.DIAGNOSTIC, JSON.stringify(resp));
-    }, 4000);
     
   } catch (error) {
     next(error);

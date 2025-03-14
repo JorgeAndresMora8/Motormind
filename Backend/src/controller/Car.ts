@@ -14,7 +14,6 @@ const GetCars = async (req: Request, res: Response, next: NextFunction) => {
 
 const AddCar = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        // CREAR VALIDACION BASADO EN EL TIPO DE DATO DEL FRONTEND, ES DECIR, NO VA A CONTENER ID, DEVUELVE EL OBJ CON ID
         await carService.createCar(req.body);
         const newList = await carService.getCars();
         const io = getSocketInstance();

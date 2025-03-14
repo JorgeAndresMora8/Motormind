@@ -54,6 +54,7 @@ function SymptomsModal({ carId }: SymptomsModalProps) {
       setSymptoms("");
     } catch (err) {
       setError((err as Error).message);
+      toast.error('Hubo un error generando el diagnostico')
     } finally {
       setLoading(false);
       showToast()
