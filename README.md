@@ -8,6 +8,18 @@ Clean Architecture permite separar claramente las responsabilidades dentro de la
 
 Esta estructura proporciona múltiples beneficios, como la reducción de la dependencia entre módulos, la facilidad para realizar pruebas, la escalabilidad del proyecto y la flexibilidad para futuras modificaciones sin afectar el núcleo de la aplicación.
 
+## Ejecutar Aplicacion
+
+Antes de comenzar, asegúrate de tener instalado lo siguiente en tu máquina:
+
+## Clonar el Repositorio
+
+Para clonar el repositorio, ejecuta el siguiente comando en tu terminal:
+
+```bash
+git clone https://github.com/tu-usuario/tu-repositorio.git
+```
+
 ## Frontend
 
 
