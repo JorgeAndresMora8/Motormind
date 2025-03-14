@@ -222,6 +222,9 @@ Con socket.io, gracias a su comunicación bidireccional en tiempo real:
 - Una vez finalizada la operación, el servidor envía una notificación específica al frontend mediante un socket, informando que el diagnóstico está listo.
 Esto elimina la espera forzada, optimiza el uso de recursos y permite multitarea, manteniendo al usuario informado en tiempo real.
 
+### Uso de MongoDB Atlas
+Se utilizó MongoDB Atlas como servicio en la nube para alojar y gestionar la base de datos MongoDB.
+
 ### Representación De Modelos
 Representacion de Autos:
 ```
