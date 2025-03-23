@@ -4,7 +4,7 @@ import {createID} from "../../utilities";
 
 export interface ICarService {
     getCars(): Promise<ICar[]>;
-    getCarById(id: string): Promise<ICar | null>;
+    getCarById(id: string): Promise<ICar | void>;
     createCar(data: ICar): Promise<ICar>;
     deleteCar(id: string): Promise<any>;
   }
@@ -20,7 +20,7 @@ export class CarService implements ICarService {
     return await this.repository.getAllCars() as ICar[];
   }
 
-  async getCarById(id: string): Promise<ICar | null> {
+  async getCarById(id: string): Promise<ICar | void> {
     return await this.repository.getCarById(id);
   }
 

@@ -1,10 +1,11 @@
 import { carDAO, ICarDAO } from "./DAO";
 import {ICar} from '../../types'
 import CarModel from "./model";
+import { ClientError } from "../../error";
 
 export interface ICarRepository {
     getAllCars(): Promise<ICar[]>;
-    getCarById(id: string): Promise<ICar | null>;
+    getCarById(id: string): Promise<ICar | void>;
     addCar(data: ICar): Promise<ICar>;
     deleteCar(id: string): Promise<any>;
   }
@@ -27,10 +28,12 @@ export class CarRepository implements ICarRepository {
     return carList as ICar[];
   }
 
-  async getCarById(id: string): Promise<ICar | null> {
+  async getCarById(id: string): Promise<ICar | void> {
     const resp = await this.carDao.findById(id) as ICar;
+    
+    if(!resp) throw new ClientError(`Product with id ${id} does not exist!`)
     const car = new CarModel(resp.id, resp.brand, resp.year, resp.model, resp.milaege, resp.image);
-    return car.asDTO() as ICar | null;
+    return car.asDTO() as ICar
   }
 
   async addCar(car: ICar): Promise<ICar> {

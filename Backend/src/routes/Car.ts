@@ -1,10 +1,11 @@
-import { Router } from 'express'
-import { AddCar, GetCar, GetCars } from '../controller'
+import { Router } from 'express';
+import { AddCar, GetCar, GetCars } from '../controller';
+import { catchedAsync } from '../utilities';
 
-const CarRouter = Router()
+const CarRouter = Router();
 
-CarRouter.get("/", GetCars)
-CarRouter.post("/", AddCar)
-CarRouter.get('/:id', GetCar)
+CarRouter.get("/", catchedAsync(GetCars));
+CarRouter.post("/", catchedAsync(AddCar));
+CarRouter.get('/:id', catchedAsync(GetCar));
 
-export default CarRouter
+export default CarRouter;

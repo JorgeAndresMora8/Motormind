@@ -5,16 +5,17 @@ import {ICar} from "../../types/car";
 import Detail from "./Components/detail/Detail";
 import Diagnosis from "./Components/diagnosis/Diagnosis";
 import {API_ROUTES} from "../../config/apiRoutes";
+import { Error } from "../../components";
 
 function CarDetail() {
 
   const { id } = useParams()
   const { loading, data, error } = useFetch<ICar>(API_ROUTES.CARS(id), () => {})
 
-  if(error){ 
-    console.error(error);
-    return <div>Error al cargar la información del vehículo</div>
-  }
+    if(error){ 
+      console.error(error);
+      return <Error message="Error al cargar la información del vehículo" />  // Error component to display error messages
+    }
 
   return (
     <div className="d-flex justify-content-center align-items-start flex-wrap gap-5 h-75 pt-5 pb-5 mt-5">

@@ -13,10 +13,10 @@ function useFetch<T>(url: string, successFunction: (params: T) => void): FetchDa
 
     const abortController = new AbortController()
 
-    function fetchData(){ 
+    async function fetchData(){ 
         try{
         setLoading(true)
-        fetch(url,
+        await fetch(url,
             {  
             headers: {
               'Content-Type': 'application/json',
